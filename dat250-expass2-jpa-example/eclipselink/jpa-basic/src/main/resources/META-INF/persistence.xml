@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+    <persistence-unit name="todos" transaction-type="RESOURCE_LOCAL">
+        <class>no.hvl.dat250.jpa.basicexample.Todo</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver"/>
+            <property name="javax.persistence.jdbc.url"
+                      value="jdbc:derby:C:\Source\assignment2\todos;create=true"/>
+            <property name="javax.persistence.jdbc.user" value="test"/>
+            <property name="javax.persistence.jdbc.password" value="test"/>
+
+            <property name="eclipselink.ddl-generation" value="create-tables"/>
+            <property name="eclipselink.ddl-generation.output-mode" value="database"/>
+        </properties>
+    </persistence-unit>
+    <persistence-unit name="bankExample" transaction-type="RESOURCE_LOCAL">
+        <class>bankingexample.Address</class>
+        <class>bankingexample.CreditCard</class>
+        <class>bankingexample.PinCode</class>
+        <class>bankingexample.Bank</class>
+        <class>bankingexample.Person</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:derby:C:\Source\assignment2\assignment2Ex-6;create=true"/>
+            <property name="javax.persistence.jdbc.user" value="bankexample"/>
+            <property name="javax.persistence.jdbc.password" value="bankexample"/>
+
+            <property name="eclipselink.ddl-generation" value="create-tables"/>
+            <property name="eclipselink.ddl-generation.output-mode" value="database"/>
+        </properties>
+
+    </persistence-unit>
+</persistence>
