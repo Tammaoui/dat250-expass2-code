@@ -1,4 +1,4 @@
-# dat250-jpa-examples
+# Updated project with many to many relations
 
 1. Import this project as a maven-project such that the database dependencies are loaded.
 2. Make sure to change the path in the `persistence.xml` (see TODO).
